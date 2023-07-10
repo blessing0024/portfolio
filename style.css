@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:wght@300;400;500;700&display=swap');
+
+/* font-family: 'Playfair', serif; */
+
+:root{ 
+    --sideBGColor: #040b1a;
+   --themeColor: #00A78E;
+   --iconColor: #2c2F3F;
+   --textColor: #525252;
+   --bgColor: #F7F7F7;
+   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair', serif;
+}
+
+header{
+    height: 100vh;
+    width: 300px;
+    padding: 15px 30px;
+    /* position: fixed; */
+    left: 0;
+    top: 0;
+    transition: 0.4s;
+    z-index: 99;
+    bottom: 0;
+    overflow-y: auto;
+    background-color: var(--sideBGColor);
+}
+
+header .profile{
+    text-align: center;
+    margin: 10px 0;
+}
+
+header .profile img{
+    border-radius: 50%;
+    margin: 10px 0;
+    border: 7px solid var(--iconColor);
+}
+
+header .profile h1{
+    color: white;
+    font-weight: 700;
+}
+
+header .profile .social-icons a{
+    display: inline-block;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 35px;
+    background-color: var(--iconColor);
+    color: white;
+    transition: 0.4s;
+    margin: 1.5px;
+}
+
+header .profile .social-icons a:hover{
+    background-color: var(--themeColor);
+}
+
+header nav{
+    margin-top: 30px;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 10px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+header nav ul li a i{
+    margin-right: 10px;
+    transition: 0.4s;
+    font-size: 15px;
+}
+
+header nav ul li a:hover{
+    color: var(--themeColor);
+}
+
+header nav ul li .active i{
+    color: var(--themeColor);
+}
+
+header .footer{
+    text-align: center;
+    background-color: var(--sideBGColor);
+    color: white;
+    width: 250px;
+    font-size: 14px;
+    padding: 5px;
+    bottom: 0;
+    letter-spacing: 0.6px;
+    position: fixed;
+    left: 0;
+    transition: 0.4s;
+}
+
+header .footer p a{
+    color: white;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+header .footer p a:hover{
+    color: var(--themeColor);
+}
+
+/* this is the menu toggle btn */
+
+#MenuBtn{
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: var(--themeColor);
+    text-align: center;
+    line-height: 40px;
+    z-index: 999;
+    border-radius: 50px;
+    display: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+}
+
+/* this is mobile view */
+
+@media only screen and (max-width: 1050px){
+    header{
+        left: -300px;
+    }
+
+    header .footer{
+        left: -300px;
+    }
+
+    #MenuBtn{
+        display: block;
+    }
+}
