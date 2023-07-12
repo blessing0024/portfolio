@@ -22,7 +22,7 @@ header{
     height: 100vh;
     width: 300px;
     padding: 15px 30px;
-    /* position: fixed; */
+    position: fixed;
     left: 0;
     top: 0;
     transition: 0.4s;
@@ -91,7 +91,7 @@ header nav ul li a i{
     font-size: 15px;
 }
 
-header nav ul li a:hover{
+header nav ul li a:hover i{
     color: var(--themeColor);
 }
 
@@ -155,5 +155,90 @@ header .footer p a:hover{
 
     #MenuBtn{
         display: block;
+    }
+}
+
+
+.mobile-nav-active header{
+    left: 0;
+}
+
+.mobile-nav-active header .footer{
+    left: 0;
+}
+
+main{
+    margin-left: 300px;
+    background-color: var(--bgColor);
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 1050px){
+    main{
+        margin-left: 0;
+    }
+}
+
+/* this is the home section */
+#home{
+    height: 100vh;
+    width: 100%;
+    background-image: url('images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 70px;
+}
+
+#home::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#home .home-row h1{
+    font-size: 68px;
+    color: white;
+    font-weight: 600;
+    line-height: 70px;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+#home .home-row h1 span{
+    color: var(--themeColor);
+}
+
+#home .home-row p{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 670px){
+    #home{
+        padding: 30px;
+    }
+
+    #home .home-row h1{
+        font-size: 30px;
+        letter-spacing: -1px;
+        line-height: 50px;
+    }
+
+    #home .home-row h1 br{
+        display: none;
+    }
+
+    #home .home-row p{
+        color: whitesmoke;
+        font-size: 20px;
+        font-weight: 400;
     }
 }
