@@ -456,3 +456,83 @@ main{
     }
     
 }
+
+
+#skills{
+    padding: 70px 30px;
+}
+
+#skills .skills-row{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+
+#skills .skills-row .skills-box .skills-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+#skills .skills-row .skills-box .skills-info h2{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--textColor);
+    font-style: italic;
+}
+
+#skills .skills-row .skills-box .skill-outter-line{
+    width: 100%;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 15px;
+}
+
+#skills .skills-row .skills-box .skill-outter-line .skill-inner-line{
+    height: 10px;
+    background-color: var(--themeColor);
+    border-radius: 20px;
+}
+
+
+
+/* This is for mobile screen */
+
+@media only screen and (max-width: 450px){
+    #skills{
+        padding: 50px 15px;
+    }
+
+    #skills .skills-row{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+
+/* this is resume section */
+
+#resume{
+    padding: 70px 30px;
+    background-color: white;
+}
+
+#resume .resume-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+#resume .resume-row .resume-cols{
+    flex-basis: 50%;
+}
+
+#resume .resume-row .resume-cols h2{
+    font-size: 30px;
+    color: var(--themeColor);
+}
