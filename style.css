@@ -322,7 +322,7 @@ main{
 #about .about-col .info-col .icon-list-col ul li strong{
     color: var(--sideBGColor);
     font-weight: 600;
-    max-resolution: 2px;
+    margin-right: 2px;
 }
 
 #about .about-col .info-col .icon-list-col ul li span{
@@ -378,7 +378,7 @@ main{
     #about .about-col .info-col .icon-list-col ul li strong{
         color: var(--themeColor);
         font-weight: 600;
-        max-resolution: 2px;
+        margin-right: 2px;
     }
 
     #about .about-col .info-col .icon-list-col ul li span{
@@ -715,6 +715,7 @@ padding: 70px 30px;
     visibility: visible;
     transform: scale(1);
     transition: 1s;
+    transform-origin: top;
     opacity: 85%;
     
 }
@@ -770,5 +771,81 @@ padding: 70px 30px;
     #my-portfolio .port-row{
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 15px;
+    }
+}
+
+
+/* This is the service section */
+
+#service{
+    padding: 70px 30px;
+    background-color: white;
+}
+
+#service .service-row{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#service .service-row .service-box{
+    display: flex;
+    gap: 20px;
+}
+
+#service .service-row .service-box .icon{
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--themeColor);
+    font-size: 20px;
+    line-height: 45px;
+    background-color: var(--themeColor);
+    color: var(--bgColor);
+    text-align: center;
+    transition: 0.6s;
+}
+
+#service .service-row .service-box:hover .icon i{
+    color: var(--themeColor);
+    background-color: var(--bgColor);
+}
+
+#service .service-row .service-box .service-info h4{
+    color: var(--sideBGColor);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#service .service-row .service-box .service-info h4 + p{
+    color: var(--textColor);
+}
+
+
+/* This is for mobile view */
+
+@media only screen and (max-width: 850px){
+    #service {
+        padding: 50px 10px;
+        background-color: white;
+    }
+
+    #service .service-row{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 450px){
+    #service {
+        padding: 30px 7px;
+        background-color: white;
+    }
+
+    #service .service-row{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
     }
 }
