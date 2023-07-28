@@ -16,6 +16,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Playfair', serif;
+    scroll-behavior: smooth;
 }
 
 header{
@@ -848,4 +849,123 @@ padding: 70px 30px;
         grid-template-columns: repeat(1, 1fr);
         gap: 10px;
     }
+}
+
+
+/* This is the contact section */
+
+#contactme{
+    padding: 70px 30px;
+}
+
+#contactme .contact-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+#contactme .contact-row .contact-left{
+    flex-basis: 40%;
+}
+
+#contactme .contact-row .contact-right{
+    flex-basis: 60%;
+}
+
+#contactme .contact-row .contact-left .icon-box .icon{
+    color: var(--themeColor);
+    font-size: 20px;
+}
+
+#contactme .contact-row .contact-left .icon-box .info{
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+#contactme .contact-row .contact-left .icon-box .info h4{
+    font-size: 25px;
+}
+
+#contactme .contact-row .contact-left .icon-box .info p{
+    color: var(--textColor);
+    font-size: 16px;
+}
+
+#contactme .contact-row .contact-left .icon-box .info p a{
+    color: var(--textColor);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#contactme .contact-row .contact-left .icon-box .info p a:hover{
+    color: var(--themeColor);
+}
+
+#contactme .contact-row .contact-right h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#contactme .contact-row .contact-right .contact-form{
+    display: grid;
+    grid-gap: 10px;
+}
+
+#contactme .contact-row .contact-right .contact-form .input-field{
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+
+#contactme .contact-row .contact-right .contact-form .input-field::placeholder{
+    color: var(--themeColor);
+    font-size: 18px;
+}
+
+#contactme .contact-row .contact-right .contact-form textarea{
+    resize: vertical;
+    min-height: 70px;
+    max-height: 150px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+#contactme .contact-row .contact-right .contact-form .btn{
+    background-color: #fff;
+    color: var(--themeColor);
+    font-size: 20px;
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+    border: 0;
+    padding: 10px 8px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#contactme .contact-row .contact-right .contact-form .btn:hover{
+    cursor: pointer;
+    background-color: var(--themeColor);
+    color: #fff;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: 1.5s;
+}
+
+
+/* This is for small screen */
+
+@media only screen and (max-width: 650px){
+    #contactme{
+        padding: 50px 20px; 
+    }
+
+    #contactme .contact-row{
+        flex-direction: column;
+    }
+
+
 }
